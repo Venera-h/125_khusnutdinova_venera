@@ -67,7 +67,14 @@ public class Task_1 implements Task_1_base {
         // 2 - аргументы функции заданы некорректно
         // Допустимой погрешностью при сравнении переменных типа double считать 0.000001
         // ------------------------------------------------------------------------------------
-        return 0; // Замените данный оператор кодом, решающим поставленную задачу.
+        double times =  (Math.abs(wall)*Math.sqrt(vx*vx+vy*vy+vz*vz))/speed;
+        if (time>0  && speed>0 )
+            if (((times) <=time && vx!=0 ) || Math.abs(times-time)<=0.000001 )
+                return 1;
+            else
+                return 0;
+        else
+            return 2;// Замените данный оператор кодом, решающим поставленную задачу.
     }
     @Override
     public int subtask_8_if(double k1, double b1, double k2, double b2) {
