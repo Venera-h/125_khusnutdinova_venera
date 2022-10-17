@@ -1,4 +1,4 @@
-public class Task_1 implements Task_1_base {
+ public class Task_1 implements Task_1_base {
     @Override
     public int subtask_1_if(int first, int second, int third) {
         // Вычислить и вернуть минимальный из трех полученных аргументов (first, second, third)
