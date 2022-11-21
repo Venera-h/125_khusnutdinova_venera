@@ -7,13 +7,19 @@ public interface BattleUnit {
     public int maxHealth();
     public void setMaxHealth(int value);
     public void heal(int value);
-    public void takeDamage(int value);
+    default void takeDamage(int value){
+        this.heal(-value);
+    }
     public int strength();
     public void setStrength(int value);
     public int baseStrength();
     public int armor();
     public void restoreArmor(int value);
-    public void damageArmor(int value);
+    default void damageArmor(int value) {
+        // восстановление брони в отрицательную сторону
+        this.restoreArmor(-value);
+    }
+//    public void damageArmor(int value);
     public int maxArmor();
     public void setMaxArmor(int value);
     public void specialAbility(BattleUnit[] ownTeam, BattleUnit[] enemyTeam);

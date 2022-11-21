@@ -7,21 +7,19 @@ public abstract class BattleUnitBase implements BattleUnit{
     protected int baseStrength;
     protected int maxArmor;
     protected int armor;
-    public int health;
+    protected int health;
     protected int strength;
-
-
 
     public BattleUnitBase(String name, int maxHealth, int baseStrength, int maxArmor) {
         this.name = name;
-        this.maxHealth = maxHealth;
-        this.baseStrength = baseStrength;
-        this.maxArmor = maxArmor;
+        this.maxHealth = this.health = maxHealth;
+        this.baseStrength = this.strength = baseStrength;
+        this.maxArmor = this.armor= maxArmor;
     }
 
     @Override
     public String name() {
-        return this.name();
+        return this.name;
     }
     public int health() {
         return this.health;
@@ -29,9 +27,9 @@ public abstract class BattleUnitBase implements BattleUnit{
     public int maxHealth() {
         return this.maxHealth;
     }
-    public void setMaxHealth(int value) {
-        if (this.health > value) this.health = value;
-        this.maxHealth = value;
+    public void setMaxHealth(int maxHealth) {
+        if (this.health > maxHealth) this.health = maxHealth;
+        this.maxHealth = maxHealth;
     }
     public void heal(int value){
         this.health += value;
@@ -40,10 +38,10 @@ public abstract class BattleUnitBase implements BattleUnit{
         }
     }
     public void takeDamage(int value){
-        health -= value;
+        this.health -= value;
     }
     public int strength(){
-        return this.health;
+        return this.strength;
     }
     public void setStrength(int value){
         this.strength=value;
@@ -52,7 +50,7 @@ public abstract class BattleUnitBase implements BattleUnit{
         return this.baseStrength;
     }
     public int armor(){
-        return this.maxArmor;
+        return this.armor;
     }
     public void restoreArmor(int value){
         this.armor +=value;

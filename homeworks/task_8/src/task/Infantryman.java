@@ -17,13 +17,13 @@ public class Infantryman extends BattleUnitBase {
 //         *              наносит повреждения здоровью, равные силе.
 //         *   Дополнительно:
 //         *       - минимальные повреждения любого типа - 1
-        double twoAttack = (this.strength / 2);
-        double fourAttack = (this.strength / 4);
+        double twoAttack = (this.strength() / 2);
+        double fourAttack = (this.strength() / 4);
         if (twoAttack < 1) {
-            this.strength = 1;
+            twoAttack = 1;
         }
         if (fourAttack < 1) {
-            this.strength = 1;
+            fourAttack = 1;
         }
         if (other.armor() > 0) {
             other.takeDamage((int) twoAttack);
@@ -33,4 +33,6 @@ public class Infantryman extends BattleUnitBase {
         }
     }
 }
+
+
 
