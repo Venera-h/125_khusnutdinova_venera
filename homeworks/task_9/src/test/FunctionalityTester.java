@@ -33,7 +33,7 @@ public class FunctionalityTester {
             case "task.DoubleLinkedList" -> testDoubleLinkedList();
 
             //Раскомментируйте следующую строку, если сделали подзадачу 3
-            //case "task.DoubleLinkedListSorter" -> testDoubleLinkedListSorter();
+            case "task.DoubleLinkedListSorter" -> testDoubleLinkedListSorter();
             default -> false;
         };
     }
@@ -150,7 +150,7 @@ public class FunctionalityTester {
 
 
     //Раскомментируйте следующий метод, если сделали подзадачу 3
-    /*
+
     private boolean testDoubleLinkedListSorter() {
         try {
             DoubleLinkedList<String> list = new DoubleLinkedList<>();
@@ -218,5 +218,5 @@ public class FunctionalityTester {
         }
         return allOk;
     }
-     */
+
 }

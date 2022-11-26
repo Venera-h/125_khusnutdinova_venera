@@ -8,7 +8,7 @@ public class ArmorDestroyer extends BattleUnitBase {
 //            *          Если противник в броне, наносит урон броне, равный удвоенной силе.
 //            *          Иначе наносит урон здоровью, равный четверти силы.
     public void specialAbility(BattleUnit[] ownTeam, BattleUnit[] enemyTeam) {
-        int maxenemyArmor = Integer.MIN_VALUE, index=0;
+        int maxenemyArmor = Integer.MIN_VALUE, index=0;//макс броня
 
         for (int i = 0; i < enemyTeam.length; i++) {
             BattleUnit enemy = enemyTeam[i];
