@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a18a7600-8071-4a75-b95b-8cb6daa063ae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/base/PaymentDocument.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/base/PaymentDocumentType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/base/PaymentTrackingSystem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
